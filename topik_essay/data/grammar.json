@@ -1,0 +1,902 @@
+[
+{
+"pattern": "은/는",
+"function": "Topic/Contrast",
+"levels": ["1-2"],
+"meaning_en": "topic marker / contrast",
+"meaning_uz": "mavzu/taqqoslash",
+"example_kr": "저는 학생입니다.",
+"frequency_rank": 1
+},
+{
+"pattern": "이/가",
+"function": "Subject",
+"levels": ["1-2"],
+"meaning_en": "subject marker",
+"meaning_uz": "mavzu (fe’l sub’ekt)",
+"example_kr": "사과가 맛있다.",
+"frequency_rank": 2
+},
+{
+"pattern": "을/를",
+"function": "Object",
+"levels": ["1-2"],
+"meaning_en": "object marker",
+"meaning_uz": "to‘qimalar (obe’kt)",
+"example_kr": "책을 읽다.",
+"frequency_rank": 3
+},
+{
+"pattern": "에",
+"function": "Location/Time",
+"levels": ["1-2"],
+"meaning_en": "to/at (place or time)",
+"meaning_uz": "joy/vaqtga (ga/da)",
+"example_kr": "학교에 간다.",
+"frequency_rank": 4
+},
+{
+"pattern": "에서",
+"function": "Location (action)",
+"levels": ["1-2"],
+"meaning_en": "at/from (location of action)",
+"meaning_uz": "joyda (harakat joyi)",
+"example_kr": "도서관에서 공부한다.",
+"frequency_rank": 5
+},
+{
+"pattern": "에게/한테",
+"function": "Recipient",
+"levels": ["1-2"],
+"meaning_en": "to (person)",
+"meaning_uz": "kimgadir (ga)",
+"example_kr": "친구에게 전화했다.",
+"frequency_rank": 6
+},
+{
+"pattern": "도",
+"function": "Also/Even",
+"levels": ["1-2"],
+"meaning_en": "also / too / even",
+"meaning_uz": "ham",
+"example_kr": "나도 간다.",
+"frequency_rank": 7
+},
+{
+"pattern": "와/과, 하고, 랑",
+"function": "And/With",
+"levels": ["1-2"],
+"meaning_en": "and / with",
+"meaning_uz": "va / bilan",
+"example_kr": "친구와 먹었다.",
+"frequency_rank": 8
+},
+{
+"pattern": "이다/아니다",
+"function": "Copula/Negation",
+"levels": ["1-2"],
+"meaning_en": "to be / not to be",
+"meaning_uz": "—dir / emas",
+"example_kr": "그는 의사이다. 그는 학생이 아니다.",
+"frequency_rank": 9
+},
+{
+"pattern": "-아/어요",
+"function": "Polite ending",
+"levels": ["1-2"],
+"meaning_en": "polite present/future ending",
+"meaning_uz": "nazokatli hozirgi/kelajak",
+"example_kr": "갑니다 / 가요.",
+"frequency_rank": 10
+},
+{
+"pattern": "-습니다/ㅂ니다",
+"function": "Formal ending",
+"levels": ["1-2"],
+"meaning_en": "formal declarative ending",
+"meaning_uz": "rasmiy ohang",
+"example_kr": "읽습니다.",
+"frequency_rank": 11
+},
+{
+"pattern": "-았/었/했- (과거)",
+"function": "Past tense",
+"levels": ["1-2"],
+"meaning_en": "past tense",
+"meaning_uz": "o‘tgan zamon",
+"example_kr": "갔다. 먹었다.",
+"frequency_rank": 12
+},
+{
+"pattern": "-겠다",
+"function": "Future/Intention",
+"levels": ["1-2"],
+"meaning_en": "will / intend to",
+"meaning_uz": "bo‘ladi / niyat",
+"example_kr": "가겠다.",
+"frequency_rank": 13
+},
+{
+"pattern": "-고",
+"function": "And / sequence",
+"levels": ["1-2"],
+"meaning_en": "and / then",
+"meaning_uz": "va / keyin",
+"example_kr": "먹고 잤다.",
+"frequency_rank": 14
+},
+{
+"pattern": "-아서/어서",
+"function": "Cause/Reason (basic)",
+"levels": ["1-2"],
+"meaning_en": "because / so",
+"meaning_uz": "chunki / shuning uchun",
+"example_kr": "바빠서 못 갔다.",
+"frequency_rank": 15
+},
+{
+"pattern": "-지 않다",
+"function": "Negation",
+"levels": ["1-2"],
+"meaning_en": "not (do)",
+"meaning_uz": "emas",
+"example_kr": "모르지 않습니다.",
+"frequency_rank": 16
+},
+{
+"pattern": "-고 싶다",
+"function": "Desire",
+"levels": ["1-2"],
+"meaning_en": "want to",
+"meaning_uz": "xohlamoq",
+"example_kr": "보고 싶다.",
+"frequency_rank": 17
+},
+{
+"pattern": "-세요",
+"function": "Polite imperative",
+"levels": ["1-2"],
+"meaning_en": "please do (polite imperative)",
+"meaning_uz": "iltimos — qiling",
+"example_kr": "앉으세요.",
+"frequency_rank": 18
+},
+{
+"pattern": "-지 마세요",
+"function": "Prohibition",
+"levels": ["1-2"],
+"meaning_en": "do not ... (polite)",
+"meaning_uz": "qilma(lar)",
+"example_kr": "들어오지 마세요.",
+"frequency_rank": 19
+},
+{
+"pattern": "-고 있다",
+"function": "Progressive",
+"levels": ["2-3"],
+"meaning_en": "be doing (progressive)",
+"meaning_uz": "hozir qilmoqda",
+"example_kr": "공부하고 있다.",
+"frequency_rank": 20
+},
+{
+"pattern": "-거나",
+"function": "Choice / or",
+"levels": ["2-3"],
+"meaning_en": "or (among actions)",
+"meaning_uz": "yoki",
+"example_kr": "먹거나 자거나 한다.",
+"frequency_rank": 21
+},
+{
+"pattern": "-아/어야 하다",
+"function": "Obligation",
+"levels": ["2-3"],
+"meaning_en": "must / have to",
+"meaning_uz": "majbur bo‘lmoq",
+"example_kr": "공부해야 한다.",
+"frequency_rank": 22
+},
+{
+"pattern": "-ㄹ/을 수 있다",
+"function": "Ability / possibility",
+"levels": ["2-3"],
+"meaning_en": "can / be able to",
+"meaning_uz": "qila olmoq",
+"example_kr": "할 수 있다.",
+"frequency_rank": 23
+},
+{
+"pattern": "-ㄹ/을 것이다",
+"function": "Future prediction",
+"levels": ["2-3"],
+"meaning_en": "will (future)",
+"meaning_uz": "bo‘ladi (kelajak tahmin)",
+"example_kr": "내일 올 것이다.",
+"frequency_rank": 24
+},
+{
+"pattern": "-은/는 편이다",
+"function": "Hedging / tendency",
+"levels": ["3-4"],
+"meaning_en": "tend to / somewhat",
+"meaning_uz": "odatiy holatda",
+"example_kr": "그는 친절한 편이다.",
+"frequency_rank": 25
+},
+{
+"pattern": "-는/ㄴ/던 (relative clauses)",
+"function": "Relative clause",
+"levels": ["3-4"],
+"meaning_en": "modifier for noun (that ...)",
+"meaning_uz": "sifatlovchi gap",
+"example_kr": "읽는 책, 먹던 음식",
+"frequency_rank": 26
+},
+{
+"pattern": "-도록",
+"function": "Purpose / extent",
+"levels": ["3-4"],
+"meaning_en": "so that / until",
+"meaning_uz": "uchun / qadar",
+"example_kr": "끝날 때까지 기다리도록 하세요.",
+"frequency_rank": 27
+},
+{
+"pattern": "-기로 하다",
+"function": "Decision / plan",
+"levels": ["3-4"],
+"meaning_en": "decide to / plan to",
+"meaning_uz": "qaror qilmoq",
+"example_kr": "가기로 했다.",
+"frequency_rank": 28
+},
+{
+"pattern": "-보다",
+"function": "Comparison",
+"levels": ["3-4"],
+"meaning_en": "than / compare",
+"meaning_uz": "dan ko‘ra",
+"example_kr": "나보다 커요.",
+"frequency_rank": 29
+},
+{
+"pattern": "-는 것 같다",
+"function": "Speculation / guess",
+"levels": ["3-4"],
+"meaning_en": "seems like / appears",
+"meaning_uz": "ko‘rinadi",
+"example_kr": "비가 오는 것 같다.",
+"frequency_rank": 30
+},
+{
+"pattern": "-ㄴ/는다면",
+"function": "Hypothetical condition",
+"levels": ["3-4"],
+"meaning_en": "if ... were to",
+"meaning_uz": "agar ... bo‘lsa",
+"example_kr": "시간이 있다면 가겠다.",
+"frequency_rank": 31
+},
+{
+"pattern": "-아/어 보이다",
+"function": "Appearance",
+"levels": ["3-4"],
+"meaning_en": "looks / seems",
+"meaning_uz": "ko‘rinadi",
+"example_kr": "행복해 보인다.",
+"frequency_rank": 32
+},
+{
+"pattern": "-다고 하다 / -고 하다",
+"function": "Reported speech",
+"levels": ["3-4"],
+"meaning_en": "say that / be reported to",
+"meaning_uz": "deydi / deyiladi",
+"example_kr": "그는 온다고 했다.",
+"frequency_rank": 33
+},
+{
+"pattern": "-아/어 주다",
+"function": "Benefactive",
+"levels": ["3-4"],
+"meaning_en": "do something for someone",
+"meaning_uz": "kimgadir qilmoq",
+"example_kr": "도와주세요.",
+"frequency_rank": 34
+},
+{
+"pattern": "-아/어 드리다",
+"function": "Humble benefactive",
+"levels": ["4-5"],
+"meaning_en": "do (Humble) for someone",
+"meaning_uz": "hurmat bilan berish",
+"example_kr": "도와드리겠습니다.",
+"frequency_rank": 35
+},
+{
+"pattern": "-기 위해(서)",
+"function": "Purpose",
+"levels": ["4-5"],
+"meaning_en": "in order to",
+"meaning_uz": "uchun",
+"example_kr": "시험에 합격하기 위해 공부한다.",
+"frequency_rank": 36
+},
+{
+"pattern": "-다고 볼 수 있다",
+"function": "Hedging / analysis",
+"levels": ["4-5"],
+"meaning_en": "can be considered / can be seen as",
+"meaning_uz": "deyish mumkin",
+"example_kr": "이는 긍정적이라고 볼 수 있다.",
+"frequency_rank": 37
+},
+{
+"pattern": "-에 따르면",
+"function": "Citation / reference",
+"levels": ["4-5"],
+"meaning_en": "according to",
+"meaning_uz": "ga ko‘ra",
+"example_kr": "조사에 따르면 증가했다.",
+"frequency_rank": 38
+},
+{
+"pattern": "즉 / 다시 말해",
+"function": "Explanation / restatement",
+"levels": ["4-5"],
+"meaning_en": "that is / in other words",
+"meaning_uz": "ya'ni / boshqacha qilib",
+"example_kr": "즉, 시간이 필요하다.",
+"frequency_rank": 39
+},
+{
+"pattern": "-에 비해 / -에 비하면",
+"function": "Comparison",
+"levels": ["4-5"],
+"meaning_en": "compared to / in comparison",
+"meaning_uz": "ga nisbatan",
+"example_kr": "작년에 비해 증가했다.",
+"frequency_rank": 40
+},
+{
+"pattern": "-은/는데도",
+"function": "Concession / despite",
+"levels": ["5-6"],
+"meaning_en": "even though / despite",
+"meaning_uz": "garchi ... ga qaramay",
+"example_kr": "비가 오는데도 갔다.",
+"frequency_rank": 41
+},
+{
+"pattern": "-더라도",
+"function": "Concession (even if)",
+"levels": ["5-6"],
+"meaning_en": "even if / even though",
+"meaning_uz": "hatto ... bo‘lsa ham",
+"example_kr": "늦더라도 기다리겠다.",
+"frequency_rank": 42
+},
+{
+"pattern": "-도록 하다",
+"function": "Instruction / ensure",
+"levels": ["5-6"],
+"meaning_en": "make sure to / ensure",
+"meaning_uz": "qiling shunday qilib",
+"example_kr": "규칙을 지키도록 하세요.",
+"frequency_rank": 43
+},
+{
+"pattern": "-기 시작하다",
+"function": "Start of action",
+"levels": ["4-5"],
+"meaning_en": "begin to",
+"meaning_uz": "boshlamoq",
+"example_kr": "공부하기 시작했다.",
+"frequency_rank": 44
+},
+{
+"pattern": "-게 되다",
+"function": "Result / come to",
+"levels": ["5-6"],
+"meaning_en": "come to / end up",
+"meaning_uz": "natijada bo‘lmoq",
+"example_kr": "한국어를 배우게 되었다.",
+"frequency_rank": 45
+},
+{
+"pattern": "-는 바람에",
+"function": "Negative result due to",
+"levels": ["5-6"],
+"meaning_en": "because of (unfortunate result)",
+"meaning_uz": "sababli (noqulay natija)",
+"example_kr": "길이 막히는 바람에 늦었다.",
+"frequency_rank": 46
+},
+{
+"pattern": "-을/ㄹ 텐데",
+"function": "Expectation / assumption",
+"levels": ["5-6"],
+"meaning_en": "probably / I expect",
+"meaning_uz": "taxminan shunday bo‘ladi",
+"example_kr": "올 텐데 기다리자.",
+"frequency_rank": 47
+},
+{
+"pattern": "-기로 되어 있다",
+"function": "Scheduled / arranged",
+"levels": ["5-6"],
+"meaning_en": "be scheduled / arranged to",
+"meaning_uz": "belgilangan",
+"example_kr": "회의는 내일로 되어 있다.",
+"frequency_rank": 48
+},
+{
+"pattern": "-자마자",
+"function": "Immediately after",
+"levels": ["4-5"],
+"meaning_en": "as soon as",
+"meaning_uz": "darhol ... dan so‘ng",
+"example_kr": "도착하자마자 전화했다.",
+"frequency_rank": 49
+},
+{
+"pattern": "-고 나서",
+"function": "After doing",
+"levels": ["4-5"],
+"meaning_en": "after doing",
+"meaning_uz": "qilib keyin",
+"example_kr": "먹고 나서 씻었다.",
+"frequency_rank": 50
+},
+{
+"pattern": "-을/ㄹ 만큼",
+"function": "Degree / extent",
+"levels": ["5-6"],
+"meaning_en": "to the extent that / enough to",
+"meaning_uz": "darajada",
+"example_kr": "먹을 만큼 준비했다.",
+"frequency_rank": 51
+},
+{
+"pattern": "-은/는 반면(에)",
+"function": "Contrast / on the other hand",
+"levels": ["5-6"],
+"meaning_en": "on the other hand",
+"meaning_uz": "boshqa tomondan",
+"example_kr": "그는 열심히 하는 반면에 결과는 다르다.",
+"frequency_rank": 52
+},
+{
+"pattern": "-거니와",
+"function": "Addition (formal)",
+"levels": ["5-6"],
+"meaning_en": "and also / moreover",
+"meaning_uz": "bundan tashqari",
+"example_kr": "그는 똑똑하거니와 성실하다.",
+"frequency_rank": 53
+},
+{
+"pattern": "게다가",
+"function": "Moreover",
+"levels": ["4-5"],
+"meaning_en": "in addition / moreover",
+"meaning_uz": "qolaversa",
+"example_kr": "맛있다. 게다가 싸다.",
+"frequency_rank": 54
+},
+{
+"pattern": "뿐만 아니라",
+"function": "Not only ... but also",
+"levels": ["4-5"],
+"meaning_en": "not only ... but also",
+"meaning_uz": "nafaqat ... balki",
+"example_kr": "그는 똑똑할 뿐만 아니라 친절하다.",
+"frequency_rank": 55
+},
+{
+"pattern": "-아/어도",
+"function": "Concession (even if)",
+"levels": ["4-5"],
+"meaning_en": "even if / although",
+"meaning_uz": "hatto ... bo‘lsa ham",
+"example_kr": "비가 와도 갈 것이다.",
+"frequency_rank": 56
+},
+{
+"pattern": "-을/ㄹ 수밖에 없다",
+"function": "Inevitability / no choice",
+"levels": ["5-6"],
+"meaning_en": "have no choice but to",
+"meaning_uz": "boshqa yo‘q",
+"example_kr": "갈 수밖에 없다.",
+"frequency_rank": 57
+},
+{
+"pattern": "-기 전에",
+"function": "Before doing",
+"levels": ["3-4"],
+"meaning_en": "before doing",
+"meaning_uz": "qilishdan oldin",
+"example_kr": "먹기 전에 손을 씻어라.",
+"frequency_rank": 58
+},
+{
+"pattern": "-도록 하겠다",
+"function": "Formal commitment",
+"levels": ["5-6"],
+"meaning_en": "I will ensure / will do",
+"meaning_uz": "majburiyat (qilishni ta’minlayman)",
+"example_kr": "조치하도록 하겠습니다.",
+"frequency_rank": 59
+},
+{
+"pattern": "-는 동안",
+"function": "While / during",
+"levels": ["3-4"],
+"meaning_en": "during / while",
+"meaning_uz": "davrida / paytida",
+"example_kr": "공부하는 동안 음악을 들었다.",
+"frequency_rank": 60
+},
+{
+"pattern": "-을/ㄹ 테니",
+"function": "Reason / suggestion (because I will ... so ...)",
+"levels": ["5-6"],
+"meaning_en": "I will ... so ... / probably ... therefore ...",
+"meaning_uz": "men ... qilaman, shuning uchun ...",
+"example_kr": "내가 할 테니 기다려라.",
+"frequency_rank": 61
+},
+{
+"pattern": "-는 편이다 (nuanced)",
+"function": "Moderation / hedging",
+"levels": ["3-4"],
+"meaning_en": "rather / tends to",
+"meaning_uz": "e'tibor bilan ... ga moyil",
+"example_kr": "그는 긍정적인 편이다.",
+"frequency_rank": 62
+},
+{
+"pattern": "-고 싶어 하다",
+"function": "Third-person desire",
+"levels": ["3-4"],
+"meaning_en": "want (third person)",
+"meaning_uz": "xohlamoq (uchinchi shaxs)",
+"example_kr": "그는 가고 싶어 한다.",
+"frequency_rank": 63
+},
+{
+"pattern": "-느냐고 하다 / -냐고 하다",
+"function": "Reported question",
+"levels": ["4-5"],
+"meaning_en": "ask whether / asked if",
+"meaning_uz": "so‘radi (savolni)",
+"example_kr": "그가 오느냐고 물었다.",
+"frequency_rank": 64
+},
+{
+"pattern": "-기 때문에",
+"function": "Cause (nominalized)",
+"levels": ["3-4"],
+"meaning_en": "because (nominalized cause)",
+"meaning_uz": "sababidan",
+"example_kr": "늦었기 때문에 죄송합니다.",
+"frequency_rank": 65
+},
+{
+"pattern": "-다시피",
+"function": "As can be seen / as mentioned",
+"levels": ["5-6"],
+"meaning_en": "as shown / as can be seen",
+"meaning_uz": "ko‘rinib turibdiki",
+"example_kr": "알다시피 상황이 어렵다.",
+"frequency_rank": 66
+},
+{
+"pattern": "따라서 / 그러므로 / 결국",
+"function": "Conclusion / result",
+"levels": ["4-6"],
+"meaning_en": "therefore / consequently",
+"meaning_uz": "shuning uchun / natijada",
+"example_kr": "그는 준비를 하지 않았다. 따라서 실패했다.",
+"frequency_rank": 67
+},
+{
+"pattern": "-는 게 낫다",
+"function": "Recommendation / suggestion",
+"levels": ["3-4"],
+"meaning_en": "it is better to / should",
+"meaning_uz": "yaxshiroq ... qilish",
+"example_kr": "쉬는 게 낫다.",
+"frequency_rank": 68
+},
+{
+"pattern": "-아/어 놓다",
+"function": "State after action",
+"levels": ["4-5"],
+"meaning_en": "leave in the state after doing",
+"meaning_uz": "qilib qoldirmoq",
+"example_kr": "책을 읽어 놓았다.",
+"frequency_rank": 69
+},
+{
+"pattern": "-게 마련이다",
+"function": "Inevitability / natural consequence",
+"levels": ["5-6"],
+"meaning_en": "it is natural that / bound to",
+"meaning_uz": "albatta shunday bo‘ladi",
+"example_kr": "실수는 누구나 하게 마련이다.",
+"frequency_rank": 70
+},
+{
+"pattern": "-을/ㄹ 수 있다 (ability formal)",
+"function": "Potential (formal)",
+"levels": ["4-5"],
+"meaning_en": "may / can (formal register)",
+"meaning_uz": "mumkin / qila oladi",
+"example_kr": "이 문제는 해결할 수 있다.",
+"frequency_rank": 71
+},
+{
+"pattern": "-을/ㄹ 것 같다 / -ㄹ 듯하다",
+"function": "Inference / prediction",
+"levels": ["4-5"],
+"meaning_en": "seems likely / appears",
+"meaning_uz": "ko‘rinadi / taxmin qilinadi",
+"example_kr": "비가 올 것 같다.",
+"frequency_rank": 72
+},
+{
+"pattern": "-는 데(에)",
+"function": "Nominalizer/location/time phrase",
+"levels": ["4-5"],
+"meaning_en": "in doing / the place/time for ...",
+"meaning_uz": "qilish joyi / vaqti",
+"example_kr": "한국어를 배우는 데 시간이 필요하다.",
+"frequency_rank": 73
+},
+{
+"pattern": "-만 하다 / -만큼",
+"function": "Comparison of degree",
+"levels": ["4-5"],
+"meaning_en": "as much as / as ... as",
+"meaning_uz": "qadar / kabi",
+"example_kr": "너만큼 잘한다.",
+"frequency_rank": 74
+},
+{
+"pattern": "-아/어 가지고",
+"function": "Reason / sequence (colloquial)",
+"levels": ["3-4"],
+"meaning_en": "and then / because (colloquial)",
+"meaning_uz": "va keyin / chunki (informal)",
+"example_kr": "바빠서 전화하지 못했어 가지고.",
+"frequency_rank": 75
+},
+{
+"pattern": "-기는 하지만",
+"function": "Partial concession",
+"levels": ["5-6"],
+"meaning_en": "although ... (but) still",
+"meaning_uz": "garchi ... bo‘lsa ham",
+"example_kr": "보기는 하지만 확신할 수 없다.",
+"frequency_rank": 76
+},
+{
+"pattern": "-도록(명령/요청)",
+"function": "Formal instruction",
+"levels": ["5-6"],
+"meaning_en": "please make sure to / ensure that",
+"meaning_uz": "ta'minlang",
+"example_kr": "보고서를 제출하도록 하십시오.",
+"frequency_rank": 77
+},
+{
+"pattern": "-ㄴ/는 다고 해도",
+"function": "Even if it's said that ...",
+"levels": ["5-6"],
+"meaning_en": "even if it is said that ...",
+"meaning_uz": "hatto aytilsa ham",
+"example_kr": "그가 온다고 해도 기다리지 않을 것이다.",
+"frequency_rank": 78
+},
+{
+"pattern": "-다는 점에서",
+"function": "From the point that ...",
+"levels": ["5-6"],
+"meaning_en": "in terms of / from the viewpoint that",
+"meaning_uz": "nuqtai nazardan",
+"example_kr": "효율성 측면이라는 점에서 유리하다.",
+"frequency_rank": 79
+},
+{
+"pattern": "-을/ㄹ 리가 없다",
+"function": "Strong denial",
+"levels": ["5-6"],
+"meaning_en": "there's no way / impossible that",
+"meaning_uz": "bunday bo‘lmaydi",
+"example_kr": "그가 거짓말을 할 리가 없다.",
+"frequency_rank": 80
+},
+{
+"pattern": "-을/ㄹ 만하다",
+"function": "Worthiness / recommendation",
+"levels": ["4-5"],
+"meaning_en": "worth doing / recommendable",
+"meaning_uz": "qilishga arziydi",
+"example_kr": "볼 만한 영화다.",
+"frequency_rank": 81
+},
+{
+"pattern": "-고도",
+"function": "Even though / despite",
+"levels": ["5-6"],
+"meaning_en": "even though (unexpected)",
+"meaning_uz": "garchi ... bo‘lsa ham",
+"example_kr": "아팠고도 출근했다.",
+"frequency_rank": 82
+},
+{
+"pattern": "-고 말다",
+"function": "Regretful completion",
+"levels": ["5-6"],
+"meaning_en": "end up (regrettably) doing",
+"meaning_uz": "oxiri ... qildi (afsus bilan)",
+"example_kr": "결국 늦고 말았다.",
+"frequency_rank": 83
+},
+{
+"pattern": "-도록 하다 (습관화)",
+"function": "Make it a habit / advise strongly",
+"levels": ["5-6"],
+"meaning_en": "make sure to (habit/rule)",
+"meaning_uz": "odatga aylantiring",
+"example_kr": "매일 운동하도록 하자.",
+"frequency_rank": 84
+},
+{
+"pattern": "-다 보니",
+"function": "As a result of continuous action",
+"levels": ["5-6"],
+"meaning_en": "having done ... (resulting in)",
+"meaning_uz": "doimiy ravishda ... natijasida",
+"example_kr": "일을 하다 보니 실력이 늘었다.",
+"frequency_rank": 85
+},
+{
+"pattern": "-아/어 가다",
+"function": "Progress toward a state",
+"levels": ["4-5"],
+"meaning_en": "progressively becoming",
+"meaning_uz": "sekin-asta ... ga aylanish",
+"example_kr": "점점 좋아져 가고 있다.",
+"frequency_rank": 86
+},
+{
+"pattern": "-아/어 오다",
+"function": "Accumulation until now",
+"levels": ["4-5"],
+"meaning_en": "have been doing up to now",
+"meaning_uz": "shu kunga qadar ... qilmoqda",
+"example_kr": "계속 연구해 오다.",
+"frequency_rank": 87
+},
+{
+"pattern": "-다 보면",
+"function": "If you keep ... then",
+"levels": ["5-6"],
+"meaning_en": "if one keeps ... then (result)",
+"meaning_uz": "agar davom etilsa ... bo‘ladi",
+"example_kr": "연습하다 보면 실력이 는다.",
+"frequency_rank": 88
+},
+{
+"pattern": "-을/ㄹ 뿐이다",
+"function": "Merely / only",
+"levels": ["4-5"],
+"meaning_en": "only / nothing but",
+"meaning_uz": "shunchaki ...",
+"example_kr": "그는 잘못을 인정할 뿐이다.",
+"frequency_rank": 89
+},
+{
+"pattern": "-기 마련이다",
+"function": "Natural consequence",
+"levels": ["5-6"],
+"meaning_en": "naturally / inevitably",
+"meaning_uz": "albatta shunday bo‘ladi",
+"example_kr": "부정은 결국 드러나기 마련이다.",
+"frequency_rank": 90
+},
+{
+"pattern": "-아/어도 될까요?",
+"function": "Permission request",
+"levels": ["3-4"],
+"meaning_en": "may I ...? / is it okay to ...?",
+"meaning_uz": "ruxsat beriladi-mi?",
+"example_kr": "여기 앉아도 될까요?",
+"frequency_rank": 91
+},
+{
+"pattern": "-게 하다 (사역)",
+"function": "Causative",
+"levels": ["5-6"],
+"meaning_en": "make someone do / cause to",
+"meaning_uz": "majbur qilmoq",
+"example_kr": "선생님이 학생을 공부하게 했다.",
+"frequency_rank": 92
+},
+{
+"pattern": "-이/히/리/기 (피동)",
+"function": "Passive formation",
+"levels": ["5-6"],
+"meaning_en": "be made / be done to (passive)",
+"meaning_uz": "passiv shakl",
+"example_kr": "문이 닫히다.",
+"frequency_rank": 93
+},
+{
+"pattern": "-아/어지다",
+"function": "Become passive / change of state",
+"levels": ["4-5"],
+"meaning_en": "become / get (passive/state change)",
+"meaning_uz": "o‘zgarish / passiv",
+"example_kr": "깨끗해지다.",
+"frequency_rank": 94
+},
+{
+"pattern": "-는 데도 불구하고",
+"function": "Despite / in spite of",
+"levels": ["5-6"],
+"meaning_en": "despite the fact that",
+"meaning_uz": "qarshi bo‘lsa ham",
+"example_kr": "바쁜 데도 불구하고 도와주었다.",
+"frequency_rank": 95
+},
+{
+"pattern": "-뿐더러",
+"function": "Further to / moreover",
+"levels": ["5-6"],
+"meaning_en": "besides / moreover",
+"meaning_uz": "boshqa tomondan",
+"example_kr": "그는 똑똑할 뿐더러 친절하다.",
+"frequency_rank": 96
+},
+{
+"pattern": "-을/ㄹ 경우",
+"function": "In the case of / if",
+"levels": ["5-6"],
+"meaning_en": "in case / if",
+"meaning_uz": "agar shunday bo‘lsa",
+"example_kr": "비정상이 있을 경우 보고하시오.",
+"frequency_rank": 97
+},
+{
+"pattern": "-도록 하십시오",
+"function": "Formal instruction (very polite)",
+"levels": ["5-6"],
+"meaning_en": "please ensure / please make sure",
+"meaning_uz": "iltimos ta'minlang",
+"example_kr": "규칙을 준수하도록 하십시오.",
+"frequency_rank": 98
+},
+{
+"pattern": "-는/ㄴ다고 할 수 있다",
+"function": "Conclusion/hypothesis",
+"levels": ["5-6"],
+"meaning_en": "it can be said that / one can conclude that",
+"meaning_uz": "deyish mumkin",
+"example_kr": "이 연구는 의미가 있다고 할 수 있다.",
+"frequency_rank": 99
+},
+{
+"pattern": "-을/ㄹ 뿐만 아니라",
+"function": "Not only ... but also (formal)",
+"levels": ["5-6"],
+"meaning_en": "not only ... but also",
+"meaning_uz": "nafaqat ... balki",
+"example_kr": "그는 연구뿐만 아니라 강의도 한다.",
+"frequency_rank": 100
+}
+]

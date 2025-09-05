@@ -1,0 +1,153 @@
+from telegram import Update
+from telegram.ext import ContextTypes, ConversationHandler, CommandHandler, MessageHandler, filters
+from utils.grid import create_grid_image
+from handlers.common import save_essay, count_squares, ADMIN_ID
+import io
+import os
+import openai
+import re
+import json
+from openai import OpenAI
+
+# Create client using the OPENAI_API_KEY env var
+OPENAI_API_KEY = os.environ.get("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")
+if not OPENAI_API_KEY:
+    raise RuntimeError("OPENAI_API_KEY environment variable not set. export OPENAI_API_KEY='sk-...'")
+client = OpenAI(api_key=OPENAI_API_KEY)
+
+
+ESSAY_INPUT = range(1)
+ROWS, COLS = 28, 25
+
+# Temporary storage for users’ essays
+user_essays = {}
+
+def ai_analyze_essay(text, model="gpt-4"):
+    """
+    New-style OpenAI client usage (openai>=1.0.0).
+    Returns dict: {score, mistakes, corrected_essay, feedback}
+    """
+    prompt = f"""
+You are a TOPIK 54 writing examiner. Analyze this Korean essay for grammar, coherence, vocabulary, and logical structure.
+Score essay out of 50 points with the following weights:
+- Grammar accuracy: 15 points
+- Vocabulary / expression: 10 points
+- Sentence variety & structure: 15 points
+- Coherence & logical flow: 10 points
+
+Return a JSON object ONLY (no extra commentary) with these keys:
+{{"score": int, "mistakes": ["substring1", "substring2", ...], "corrected_essay": "the full corrected essay", "feedback": "short feedback in Korean"}}
+
+Essay:
+{text}
+"""
+
+    try:
+        # Create a chat completion with the new client
+        response = client.chat.completions.create(
+            model=model,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0,
+            max_tokens=1500,
+        )
+
+        # Pull content (string) from response
+        content = response.choices[0].message["content"]
+        # Extract JSON object from the model output
+        m = re.search(r"\{.*\}", content, re.DOTALL)
+        if not m:
+            # fallback: try to parse the whole content
+            content_str = content.strip()
+        else:
+            content_str = m.group()
+
+        parsed = json.loads(content_str)
+        # validate minimal keys
+        return {
+            "score": int(parsed.get("score", 0)),
+            "mistakes": parsed.get("mistakes", []) or [],
+            "corrected_essay": parsed.get("corrected_essay", text),
+            "feedback": parsed.get("feedback", "") or ""
+        }
+
+    except (OpenAIError, ValueError, json.JSONDecodeError) as e:
+        # Log the exception server-side (print here)
+        print("AI analysis failed:", repr(e))
+        # Graceful fallback
+        return {
+            "score": 0,
+            "mistakes": [],
+            "corrected_essay": text,
+            "feedback": "AI 분석 중 오류가 발생했습니다. 잠시 후 다시 시도하세요."
+        }
+
+# --- Bot Handlers ---
+async def essay_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = update.message.from_user.id
+    user_essays[user_id] = ""
+    await update.message.reply_text(
+        "📝 54번 에세이 작성 시작\n"
+        "아래 빈칸에 600~700자 이내로 작문하십시오.\n"
+        "입력 후 `/done` 을 입력하세요."
+    )
+    return ESSAY_INPUT
+
+async def essay_input(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = update.message.from_user.id
+    text = update.message.text
+    user_essays[user_id] += text
+    await update.message.reply_text("✍️ 저장했습니다. 계속 입력하거나 `/done` 을 입력하세요.")
+    return ESSAY_INPUT
+
+async def done(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = update.message.from_user.id
+    essay_text = user_essays.get(user_id, "")
+    if not essay_text:
+        await update.message.reply_text("❌ 작성된 에세이가 없습니다.")
+        return ConversationHandler.END
+
+    # --- AI Analysis ---
+    ai_result = ai_analyze_essay(essay_text)
+    score = ai_result.get("score", 0)
+    corrected_text = ai_result.get("corrected_essay", essay_text)
+    feedback = ai_result.get("feedback", "")
+
+    # Save essay + AI feedback
+    save_essay(user_id, corrected_text, score)
+
+    # Convert mistake chars to grid positions (approximation)
+    mistakes_positions = []
+    for i, ch in enumerate(corrected_text):
+        if ch in ai_result.get("mistakes", []):
+            row = i // COLS
+            col = i % COLS
+            if row < ROWS:
+                mistakes_positions.append((row, col))
+
+    # Generate 25x28 grid image
+    img = create_grid_image(corrected_text, highlight_positions=mistakes_positions)
+    bio = io.BytesIO()
+    bio.name = "essay.png"
+    img.save(bio, "PNG")
+    bio.seek(0)
+
+    # Send back image + feedback
+    await update.message.reply_photo(
+        photo=bio,
+        caption=(
+            f"📄 작성 완료!\n"
+            f"총 칸: {count_squares(corrected_text)}\n"
+            f"예상 점수: {score}/50\n\n"
+            f"💡 Feedback:\n{feedback}"
+        )
+    )
+
+    # Reset user essay
+    user_essays[user_id] = ""
+    return ConversationHandler.END
+
+async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = update.message.from_user.id
+    user_essays[user_id] = ""
+    await update.message.reply_text("🚫 에세이 작성을 취소했습니다.")
+    return ConversationHandler.END
