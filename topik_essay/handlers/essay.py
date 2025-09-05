@@ -9,13 +9,18 @@ import re
 import json
 import bot_admin
 
-import os
-from PIL import ImageFont   # only if using Pillow
-import matplotlib.font_manager as fm   # only if using matplotlib
+from PIL import ImageFont
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
 
-# Always build absolute path to the font file
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 FONT_PATH = os.path.join(BASE_DIR, "..", "utils", "NotoSans.ttf")
+
+# Pillow
+font = ImageFont.truetype(FONT_PATH, 24)
+
+# Matplotlib
+plt.rcParams['font.family'] = fm.FontProperties(fname=FONT_PATH).get_name()
 
 # ----------------- CONFIG -----------------
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
