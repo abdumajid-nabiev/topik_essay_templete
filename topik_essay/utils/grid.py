@@ -1,9 +1,15 @@
 from PIL import Image, ImageDraw, ImageFont
 import os
 
-# Always load font relative to project root
+# Always load font relative to project roo
+ROWS, COLS = 28, 25
+GRID_LINE_WIDTH = 1        # thin, subtle lines
+BOLD_LINE_WIDTH = 1        # slightly bolder lines
+OUTER_PADDING = 25
+CELL_PADDING = 2
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 FONT_PATH = os.path.join(BASE_DIR, "..", "utils", "NotoSans.ttf")
+
 
 def get_korean_font(size=24):
     try:
@@ -12,12 +18,6 @@ def get_korean_font(size=24):
         print("❌ Font not found or cannot be loaded:", e)
         return ImageFont.load_default()
 
-ROWS, COLS = 28, 25
-GRID_LINE_WIDTH = 1        # thin, subtle lines
-BOLD_LINE_WIDTH = 1        # slightly bolder lines
-OUTER_PADDING = 25
-CELL_PADDING = 2
-FONT_PATH = "/home/evid/ABDUMAJID/CODING/PROJECTS/topik_essay/utils/NotoSans.ttf"
 
 def draw_dotted_line(draw, start, end, spacing=6, width=1, fill=(0,0,0,100)):
     x1, y1 = start
